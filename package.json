@@ -1,0 +1,38 @@
+{
+  "name": "subtree-frontend",
+  "version": "1.0.0",
+  "description": "Frontend repo to try git subtree",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tonybolanyo/subtree-frontend.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tonybolanyo/subtree-frontend/issues"
+  },
+  "homepage": "https://github.com/tonybolanyo/subtree-frontend#readme",
+  "dependencies": {
+    "gulp": "^3.9.1",
+    "spectre.css": "^0.5.1"
+  },
+  "devDependencies": {
+    "autoprefixer": "^8.2.0",
+    "browser-sync": "^2.23.6",
+    "cssnano": "^3.10.0",
+    "gulp-htmlmin": "^4.0.0",
+    "gulp-postcss": "^7.0.1",
+    "gulp-purifycss": "^0.2.0",
+    "gulp-sass": "^3.1.0",
+    "gulp-size": "^3.0.0",
+    "gulp-sourcemaps": "^2.6.4",
+    "gulp-twig": "^1.2.0",
+    "postcss-scss": "^1.0.4",
+    "stylelint": "^9.1.3"
+  }
+}
