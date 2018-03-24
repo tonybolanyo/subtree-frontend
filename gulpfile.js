@@ -16,6 +16,9 @@ var purifycss = require("gulp-purifycss");
 var sass = require("gulp-sass");
 var stylelint = require('stylelint');
 
+// for images
+var imagemin = require("gulp-imagemin");
+
 gulp.task("default", ["build"], function() {
     browserSync.init({
         server: {
@@ -30,7 +33,7 @@ gulp.task("default", ["build"], function() {
     gulp.watch(["src/styles/*.scss", "src/styles/**/*.scss"], ["sass"]);
 });
 
-gulp.task("build", ["html", "sass"])
+gulp.task("build", ["html", "sass", "images"])
 
 // compile html files
 gulp.task("html", function () {
@@ -91,4 +94,11 @@ gulp.task("sass:lint", function () {
             // lint style files
             stylelint()
         ]))
+});
+
+// images
+gulp.task("images", function() {
+    gulp.src(["src/images/*", "src/images/**/*"])
+        .pipe(imagemin())
+        .pipe(gulp.dest("dist/img/"));
 });
